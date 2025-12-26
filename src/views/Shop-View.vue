@@ -1,8 +1,24 @@
 <script setup>
-import { onMounted } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
+import axios from 'axios'
+const Products = ref()
+
+function getProducts() {
+  axios.get('https://localhost:7193/api/Product')
+    .then(response => {
+
+      console.log(response)
+    })
+    .catch(error => {
+      console.error('發生錯誤', error)
+    })
+}
+
+
 
 onMounted(() => {
   initializeOffcanvas()
+  getProducts()
 })
 </script>
 
