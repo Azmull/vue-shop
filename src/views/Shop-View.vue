@@ -6,15 +6,13 @@ const Products = ref()
 function getProducts() {
   axios.get('https://localhost:7193/api/Product')
     .then(response => {
-
-      console.log(response)
+      Products.value = response.data
+      console.log(Products)
     })
     .catch(error => {
       console.error('發生錯誤', error)
     })
 }
-
-
 
 onMounted(() => {
   initializeOffcanvas()
@@ -201,7 +199,7 @@ onMounted(() => {
         <div class="col-lg-9 col-xxl-10">
           <div class="row gx-3 gy-6 mb-8">
             <!-- 產品清單 -->
-            <div class="col-12 col-sm-6 col-md-4 col-xxl-2">
+            <div v-for="value in Products" class="col-12 col-sm-6 col-md-4 col-xxl-2">
               <div class="product-card-container h-100">
                 <div class="position-relative text-decoration-none product-card h-100">
                   <div class="d-flex flex-column justify-content-between h-100">
@@ -210,11 +208,13 @@ onMounted(() => {
                         <button class="btn btn-wish btn-wish-primary z-2">
                           <span class="fas fa-shopping-cart"></span>
                         </button>
-                        <img class="img-fluid" src="../../assets/img/products/1.png" alt="" />
+                        <img class="img-fluid" :src="`https://localhost:7193${value.image}`" alt="商品圖片" />
+
+                        <!-- <img class="img-fluid" :src="`https://localhost:7193/images/products/.png`" alt="" /> -->
                       </div>
-                      <RouterLink class="stretched-link" :to="{ name: 'Shop-View', params: { id: 6 } }">
+                      <RouterLink class="stretched-link" :to="{ name: 'Shop-View', params: { id: value.id } }">
                         <h6 class="mb-2 lh-sm line-clamp-3 product-name">
-                          PlayStation 5 DualSense Wireless Controller
+                          {{ value.name }}
                         </h6>
                       </RouterLink>
                       <p class="fs-9">
@@ -227,8 +227,8 @@ onMounted(() => {
                     </div>
                     <div>
                       <div class="d-flex align-items-center mb-1">
-                        <p class="me-2 text-body text-decoration-line-through mb-0">$125</p>
-                        <h3 class="text-body-emphasis mb-0">$89</h3>
+                        <p class="me-2 text-body text-decoration-line-through mb-0">${{ value.originalPrice }}</p>
+                        <h3 class="text-body-emphasis mb-0">${{ value.nowPrice }}</h3>
                       </div>
                     </div>
                   </div>
