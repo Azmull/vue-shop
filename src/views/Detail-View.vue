@@ -1,5 +1,8 @@
 <script setup>
-import { onMounted } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
+import axios from 'axios'
+
+const Products = ref()
 
 onMounted(() => { })// 這行放最後
 </script>

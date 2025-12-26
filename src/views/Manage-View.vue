@@ -25,7 +25,7 @@ function createProduct() {
     });
 }
 
-// 新增form可以輸入的
+// 新增form可以輸入的新產品
 const apiUrl = 'https://localhost:7193/api/Product'
 
 // 建立表單資料
@@ -37,7 +37,7 @@ const productForm = ref({
   rate: 0,
   stock: 0,
   description: '',
-  image: '',
+  image: '/images/products/0.png',
   status: true
 })
 
@@ -58,9 +58,11 @@ onMounted(() => { })
 </script>
 
 <template>
+  <!-- 固定++ -->
   <div style="margin-left: 10%;">
     <button @click="createProduct()">++</button>
   </div>
+  <br>
   <form @submit.prevent="submitForm">
     <div>
       <label>商品名稱：</label>
@@ -96,7 +98,9 @@ onMounted(() => { })
       <label>圖片路徑：</label>
       <input v-model="productForm.image" type="text" />
     </div>
-
     <button type="submit">新增商品</button>
   </form>
+  <br>
+
+
 </template>

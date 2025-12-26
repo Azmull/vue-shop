@@ -209,10 +209,8 @@ onMounted(() => {
                           <span class="fas fa-shopping-cart"></span>
                         </button>
                         <img class="img-fluid" :src="`https://localhost:7193${value.image}`" alt="商品圖片" />
-
-                        <!-- <img class="img-fluid" :src="`https://localhost:7193/images/products/.png`" alt="" /> -->
                       </div>
-                      <RouterLink class="stretched-link" :to="{ name: 'Shop-View', params: { id: value.id } }">
+                      <RouterLink class="stretched-link" :to="{ name: 'Shop-View', query: { id: value.id } }">
                         <h6 class="mb-2 lh-sm line-clamp-3 product-name">
                           {{ value.name }}
                         </h6>
