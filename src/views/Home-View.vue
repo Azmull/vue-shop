@@ -2,6 +2,8 @@
 import { onMounted } from 'vue'
 
 onMounted(() => { })
+const VITE_TITLE = import.meta.env.VITE_TITLE
+
 </script>
 
 <template>
@@ -12,6 +14,8 @@ onMounted(() => { })
     </div>
     <div class="col-auto">
       <div class="text-center text-lg-start">
+        <h2>{{ VITE_TITLE }}</h2>
+        <br>
         <h3 class="text-body-highlight mb-2"><span class="fw-semibold">歡迎來到柑仔電</span></h3>
         <h1 class="display-3 mb-4">
           趕快
