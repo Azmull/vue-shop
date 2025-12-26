@@ -75,14 +75,20 @@ import { RouterLink, RouterView } from 'vue-router'
           </li>
           <!--購物商城-->
           <li class="nav-item" data-nav-item="data-nav-item">
-            <RouterLink class="nav-link" :to="{ name: 'Detail-View' }">購物商城</RouterLink>
+            <RouterLink class="nav-link" :to="{ name: 'Shop-View' }">購物商城</RouterLink>
           </li>
-
+          <!--商品詳細頁面-->
+          <li class="nav-item" data-nav-item="data-nav-item">
+            <RouterLink class="nav-link" :to="{ name: 'Detail-View' }">商品詳細頁面</RouterLink>
+          </li>
           <!--購物車-->
 
           <!--我的訂單-->
 
           <!--商品管理(管理員)-->
+          <li class="nav-item" data-nav-item="data-nav-item">
+            <RouterLink class="nav-link" :to="{ name: 'Manage-View' }">商品管理</RouterLink>
+          </li>
 
         </ul>
       </div>

@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
 
-onMounted(() => { })
+onMounted(() => { })// 這行放最後
 </script>
 
 <template>
@@ -11,10 +11,10 @@ onMounted(() => { })
         <nav class="mb-3" aria-label="breadcrumb">
           <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item">
-              <RouterLink :to="{ name: 'Home-View' }">購物商城</RouterLink>
+              <RouterLink :to="{ name: 'Home-View' }">首頁</RouterLink>
             </li>
             <li class="breadcrumb-item">
-              <RouterLink :to="{ name: 'Detail-View' }">購物商城</RouterLink>
+              <RouterLink :to="{ name: 'Shop-View' }">購物商城</RouterLink>
             </li>
             <li class="breadcrumb-item active" aria-current="page">商品</li>
           </ol>

@@ -16,13 +16,21 @@ const router = createRouter({
       component: () => import('../views/Detail-View.vue'),
     },
     //會員-商品詳細頁面
-
+    {
+      path: '/shop',
+      name: 'Shop-View',
+      component: () => import('../views/Shop-View.vue'),
+    },
     //會員-購物車
 
     //會員-我的訂單
 
     //管理員-商品管理
-
+    {
+      path: '/manage',
+      name: 'Manage-View',
+      component: () => import('../views/Manage-View.vue'),
+    },
 
 
 

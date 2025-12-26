@@ -196,7 +196,7 @@ onMounted(() => {
                         </button>
                         <img class="img-fluid" src="../../assets/img/products/1.png" alt="" />
                       </div>
-                      <RouterLink class="stretched-link" :to="{ name: 'product-detail', params: { id: 6 } }">
+                      <RouterLink class="stretched-link" :to="{ name: 'Shop-View', params: { id: 6 } }">
                         <h6 class="mb-2 lh-sm line-clamp-3 product-name">
                           PlayStation 5 DualSense Wireless Controller
                         </h6>
