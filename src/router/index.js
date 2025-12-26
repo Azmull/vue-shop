@@ -6,11 +6,15 @@ const router = createRouter({
     //首頁
     {
       path: '/',
-      name: 'home',
+      name: 'Home-View',
       component: () => import('../views/Home-View.vue'),
     },
     //會員-購物商城
-
+    {
+      path: '/detail',
+      name: 'Detail-View',
+      component: () => import('../views/Detail-View.vue'),
+    },
     //會員-商品詳細頁面
 
     //會員-購物車
@@ -19,6 +23,16 @@ const router = createRouter({
 
     //管理員-商品管理
 
+
+
+
+
+
+
+
+
+
+    // 這行放最後面
     //404頁面
     { path: '/:pathMatch(.*)*',
       name:'notFound',

@@ -71,10 +71,12 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="container-small d-flex flex-between-center" data-navbar="data-navbar">
         <ul class="navbar-nav justify-content-end align-items-center py-2">
           <li class="nav-item" data-nav-item="data-nav-item">
-            <RouterLink class="nav-link" :to="{ name: 'home' }">首頁</RouterLink>
-            <RouterLink class="nav-link" :to="{ name: 'notFound' }"></RouterLink>
+            <RouterLink class="nav-link" :to="{ name: 'Home-View' }">首頁</RouterLink>
           </li>
           <!--購物商城-->
+          <li class="nav-item" data-nav-item="data-nav-item">
+            <RouterLink class="nav-link" :to="{ name: 'Detail-View' }">購物商城</RouterLink>
+          </li>
 
           <!--購物車-->
 

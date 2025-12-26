@@ -11,10 +11,10 @@ onMounted(() => { })
         <nav class="mb-3" aria-label="breadcrumb">
           <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item">
-              <RouterLink :to="{ name: 'home' }">購物商城</RouterLink>
+              <RouterLink :to="{ name: 'Home-View' }">購物商城</RouterLink>
             </li>
             <li class="breadcrumb-item">
-              <RouterLink :to="{ name: 'product-shop' }">購物商城</RouterLink>
+              <RouterLink :to="{ name: 'Detail-View' }">購物商城</RouterLink>
             </li>
             <li class="breadcrumb-item active" aria-current="page">商品</li>
           </ol>
