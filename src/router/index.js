@@ -20,6 +20,10 @@ const router = createRouter({
     //管理員-商品管理
 
     //404頁面
+    { path: '/:pathMatch(.*)*',
+      name:'notFound',
+      component:()=>import('../views/404-View.vue') 
+    }
   ],
 })
 
