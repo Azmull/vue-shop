@@ -1,7 +1,9 @@
 <script setup>
-  import { onMounted } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
+import axios from 'axios'
 
-  onMounted(() => {})
+
+onMounted(() => { })
 </script>
 
 <template>
